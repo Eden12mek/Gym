@@ -4,7 +4,7 @@ import Offerimage from '../images/offer.png'
 function Offer() {
   return (
     <div>
-     <img src={Offerimage} alt="" />
+     <img src={Offerimage} alt="offer image" />
     </div>
   )
 }
