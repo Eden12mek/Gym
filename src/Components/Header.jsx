@@ -43,8 +43,10 @@ function Header() {
           <span style={{ color: 'crimson' }}>FITNESS</span> WITH US
         </h1>
         <p className="details text-white text-lg">Build Your Body And Fitness With Professional Touch</p>
+        <button className='text-white' style={{ backgroundColor: 'crimson', borderRadius: 4, width: 100, py: 2 }}>JOIN US</button>
       </div>
     </div>
+    
   );
 }
 
