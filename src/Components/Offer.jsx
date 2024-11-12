@@ -3,7 +3,7 @@ import Offerimage from '../images/offer.png';
 
 function Offer() {
   return (
-    <div className="relative">
+    <div id='offer' className="relative">
       <img src={Offerimage} alt="offer image" className="w-full h-full" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
         <h1 className="text-white" style={{ fontSize: '80px', fontWeight: 'normal' }}>
@@ -12,13 +12,13 @@ function Offer() {
         <p style={{ color: 'white', fontSize: '80px', fontWeight: 'normal', marginTop: '-20px' }}>
           THIS MONTH
         </p>
-        <p style={{ color: 'white' }}>Discover Your Potential, Embrace Your Strength With This Offer</p>
+        <p style={{ color: 'white', fontSize: '20px' }}>Discover Your Potential, Embrace Your Strength With This Offer</p>
         <button
           className="text-white"
           style={{
             backgroundColor: 'crimson',
-            borderRadius: 4,
-            width: 150,
+            borderRadius: 10,
+            width: 170,
             paddingTop: '0.5rem',
             paddingBottom: '0.5rem',
             fontSize: '25px',

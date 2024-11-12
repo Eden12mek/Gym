@@ -8,7 +8,7 @@ import Contact from './Components/Contact';
 
 function App() {
   return (
-    <div className="App " style={{backgroundColor:'black'}}>
+    <div className="App " style={{ backgroundColor: 'black' }}>
       <Header /> {/* This includes the Navbar and banner */}
       <Features />
       <Offer />

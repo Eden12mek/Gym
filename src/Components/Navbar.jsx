@@ -57,10 +57,13 @@ function Navbar() {
                             onMouseEnter={(e) => (e.target.style.backgroundColor = 'crimson')}
                             onMouseLeave={(e) => (e.target.style.backgroundColor = 'transparent')}
                         >
-                            {item}
+                            <a href={`#${item.toLowerCase()}`} className="text-white">
+                                {item}
+                            </a>
                         </li>
                     ))}
                 </ul>
+
             </div>
         </nav>
     );
