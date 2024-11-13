@@ -3,7 +3,7 @@ import Offerimage from '../images/offer.png';
 
 function Offer() {
   return (
-    <div id='offer' className="relative">
+    <div id='offer' className="relative mb-20">
       <img src={Offerimage} alt="offer image" className="w-full h-full" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
         <h1 className="text-white" style={{ fontSize: '80px', fontWeight: 'normal' }}>

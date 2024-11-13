@@ -8,9 +8,9 @@ import Featurebox from './Featurebox';
 function Features() {
   return (
     <div id="features" className="text-white px-4 lg:px-10 mb-20">
-      <h1 className="text-center text-4xl md:text-5xl font-bold pt-20 space-x-2">FEATURES</h1>
+      <h1 className="text-center text-4xl md:text-5xl font-bold pt-44 space-x-2 mt-14">FEATURES</h1>
 
-      <div className="flex flex-wrap justify-center gap-6 pt-8 max-w-full">
+      <div className="flex flex-wrap pt-8 max-w-full mt-20">
         {/* Feature 1 */}
         <div className="flex flex-col items-center basis-full sm:basis-1/2 lg:basis-1/4 p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl">
           <Featurebox image={fimage1} title={<span className="font-bold text-2xl md:text-3xl">WeightLifting</span>} />

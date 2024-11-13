@@ -3,15 +3,15 @@ import AboutImage from '../images/about.png'
 
 function About() {
   return (
-    <div id='about' className='relative flex flex-row space-x-10'>
+    <div id='about' className='relative flex flex-row justify-center space-x-10 mb-28 pt-10'>
 
-      <img src={AboutImage} alt="" />
+      <img src={AboutImage} alt="" className="w-full lg:w-1/2 mb-8 lg:mb-0 object-cover rounded-lg shadow-lg " />
 
 
-      <div>
-        <h1 className='' style={{ color: 'crimson', fontSize: '50px', marginBottom: '-30px' }}> LEARN MORE ABOUT </h1>
+      <div className='mt-40'>
+        <h1 className='' style={{ color: 'crimson', fontSize: '50px', marginTop: '-40px' }}> LEARN MORE ABOUT </h1>
         <p style={{ color: 'crimson', fontSize: '50px' }}>US</p>
-        <p className="text-white text-base md:text-lg leading-relaxed mb-6 text-justify">
+        <p className="text-white text-base md:text-lg leading-relaxed mt-8 text-justify max-w-xl">
           We’re not just a gym—we’re a community dedicated to helping you reach your fitness goals.
           With cutting-edge equipment, expert trainers, and a range of classes, we provide everything
           you need for a personalized fitness experience. Whether you're building strength, improving
@@ -19,6 +19,7 @@ function About() {
           step of the way. At Hena GYM, you're part of a team that celebrates every victory.
           Join us and discover what you’re truly capable of!
         </p>
+
         <button
           className="text-white"
           style={{
@@ -28,7 +29,7 @@ function About() {
             paddingTop: '0.5rem',
             paddingBottom: '0.5rem',
             fontSize: '15px',
-            marginTop: '30px'
+            marginTop: '50px'
           }}
         >
           READ MORE</button>
