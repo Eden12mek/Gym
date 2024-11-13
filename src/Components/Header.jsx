@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import banner from '../images/banner.png';
 import Navbar from './Navbar';
 
 function Header() {
+  // State to manage button text and width
+  const [isJoined, setIsJoined] = useState(false);
+
+  // Handle button click event
+  const handleButtonClick = () => {
+    setIsJoined(true); // Change the text when the button is clicked
+  };
+
   return (
-    <div id='header' className="relative w-full h-screen">
+    <div id="header" className="relative w-full h-screen">
       <Navbar />
       <img
         src={banner}
@@ -16,23 +24,29 @@ function Header() {
         <h1 className="text-white text-8xl font-bold">
           <span style={{ color: 'crimson' }}>FITNESS</span> WITH US
         </h1>
-        <p className="details text-white text-lg" style={{fontSize:'20px'}}>Build Your Body And Fitness With Professional Touch</p>
+        <p className="details text-white text-lg" style={{ fontSize: '20px' }}>
+          Build Your Body And Fitness With Professional Touch
+        </p>
         <button
+          onClick={handleButtonClick} // Trigger handleButtonClick on button click
           className="text-white"
           style={{
             backgroundColor: 'crimson',
             borderRadius: 10,
-            width: 150,
+            width: isJoined ? '250px' : '150px',
+            height: '50px',
             paddingTop: '0.5rem',
             paddingBottom: '0.5rem',
             fontSize: '20px',
-            marginTop: '30px'
+            marginTop: '30px',
+            transition: 'width 0.5s ease',
+            transform: isJoined ? 'translateX(20px)' : 'none',
           }}
         >
-          JOIN US</button>
+          {isJoined ? "Welcome To Hena's Gym" : "JOIN US"}
+        </button>
       </div>
     </div>
-
   );
 }
 
