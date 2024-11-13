@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '../images/logo.png';
 
 function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,28 +25,28 @@ function Navbar() {
 
                 {/* Logo and Text Container */}
                 <div className="flex items-center space-x-2">
-                    <h1 className="text-white text-3xl font-extrabold tracking-wide flex items-center pl-40">
-                        <span className="font-serif" style={{ fontFamily: 'Poppins, sans-serif' }}>ℌ𝔢𝔫𝔞 𝔾𝕪𝕞 </span>
+                    <h1 className="text-white text-3xl font-extrabold tracking-wide flex items-center lg:pl-40 lg:pt-3">
+                        <span className="font-serif pl-10 pt-5 lg:pl-0" style={{ fontFamily: 'Poppins, sans-serif' }}>ℌ𝔢𝔫𝔞 𝔾𝕪𝕞 </span>
                     </h1>
                 </div>
 
                 {/* Menu Icon for Mobile */}
                 <div
-                    className="lg:hidden pr-40 cursor-pointer text-white relative"
+                    className="lg:hidden pr-20 cursor-pointer text-white relative"
                     onClick={toggleMenu}
                     aria-expanded={menuOpen}
                     aria-label="Toggle navigation menu"
                 >
                     {menuOpen ? (
-                        <span className="text-3xl absolute left-0 top-0 transition-all duration-300 ease-in-out">&times;</span> // X Icon
+                        <span className="text-5xl absolute left-0 top-0 transition-all duration-300 ease-in-out">&times;</span> // X Icon
                     ) : (
                         <span className="text-3xl absolute left-0 top-0 transition-all duration-300 ease-in-out">&#9776;</span> // Menu Icon
                     )}
                 </div>
 
-                {/* Navigation Links */}
+                {/* Desktop Navigation Links */}
                 <ul
-                    className={`lg:flex space-x-10 text-white pr-40 ml-0 ${menuOpen ? 'block' : 'hidden'} lg:block transition duration-300 ease-in-out`}
+                    className={`lg:flex space-x-10 text-white pr-40 ml-0 ${menuOpen ? 'hidden' : 'hidden'} lg:block transition duration-300 ease-in-out`}
                 >
                     {['HEADER', 'FEATURES', 'OFFER', 'ABOUT', 'CONTACT'].map((item) => (
                         <li
@@ -65,6 +64,22 @@ function Navbar() {
                 </ul>
 
             </div>
+
+            {/* Mobile Navigation Background Box */}
+            {menuOpen && (
+                <div className="absolute top-full left-0 w-full bg-black text-white p-4 z-10 border-b-8 border-red-600">
+                    <ul className="space-y-4 text-center">
+                        {['HEADER', 'FEATURES', 'OFFER', 'ABOUT', 'CONTACT'].map((item) => (
+                            <li key={item} className="cursor-pointer">
+                                <a href={`#${item.toLowerCase()}`} className="block py-2">
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
+
         </nav>
     );
 }

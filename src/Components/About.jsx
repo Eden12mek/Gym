@@ -3,12 +3,12 @@ import AboutImage from '../images/about.png'
 
 function About() {
   return (
-    <div id='about' className='relative flex flex-row justify-center space-x-10 mb-28 pt-10'>
+    <div id='about' className='relative flex flex-col lg:flex-row justify-center space-x-10 mb-28 pt-10 px-4 lg:px-10'>
 
       <img src={AboutImage} alt="" className="w-full lg:w-1/2 mb-8 lg:mb-0 object-cover rounded-lg shadow-lg " />
 
 
-      <div className='mt-40'>
+      <div className='lg:mt-40 '>
         <h1 className='' style={{ color: 'crimson', fontSize: '50px', marginTop: '-40px' }}> LEARN MORE ABOUT </h1>
         <p style={{ color: 'crimson', fontSize: '50px' }}>US</p>
         <p className="text-white text-base md:text-lg leading-relaxed mt-8 text-justify max-w-xl">
@@ -21,7 +21,7 @@ function About() {
         </p>
 
         <button
-          className="text-white"
+          className="text-white "
           style={{
             backgroundColor: 'crimson',
             borderRadius: 10,
