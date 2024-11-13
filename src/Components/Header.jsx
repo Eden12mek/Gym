@@ -5,6 +5,8 @@ import Navbar from './Navbar';
 function Header() {
   // State to manage button text and width
   const [isJoined, setIsJoined] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
 
   // Handle button click event
   const handleButtonClick = () => {
@@ -29,7 +31,7 @@ function Header() {
         </p>
         <button
           onClick={handleButtonClick} // Trigger handleButtonClick on button click
-          className="text-white"
+          className="text-white hover:scale-105"
           style={{
             backgroundColor: 'crimson',
             borderRadius: 10,
@@ -39,12 +41,15 @@ function Header() {
             paddingBottom: '0.5rem',
             fontSize: '20px',
             marginTop: '30px',
-            transition: 'width 0.5s ease',
-            transform: isJoined ? 'translateX(20px)' : 'none',
+            transition: 'width 0.5s ease, transform 0.3s ease', // Include transform in the transition
+            transform: `${isJoined ? 'translateX(20px)' : 'none'} scale(${isHovered ? 1.05 : 1})`, // Apply scale effect
           }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           {isJoined ? "Welcome To Hena's Gym" : "JOIN US"}
         </button>
+
       </div>
     </div>
   );

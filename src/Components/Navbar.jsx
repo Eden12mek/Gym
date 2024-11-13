@@ -26,7 +26,9 @@ function Navbar() {
                 {/* Logo and Text Container */}
                 <div className="flex items-center space-x-2">
                     <h1 className="text-white text-3xl font-extrabold tracking-wide flex items-center lg:pl-40 lg:pt-3">
-                        <span className="font-serif pl-10 pt-5 lg:pl-0" style={{ fontFamily: 'Poppins, sans-serif' }}>ℌ𝔢𝔫𝔞 𝔾𝕪𝕞 </span>
+                        <a href="#top" className="font-serif pl-10 pt-5 lg:pl-0" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                            ℌ𝔢𝔫𝔞 𝔾𝕪𝕞
+                        </a>
                     </h1>
                 </div>
 
